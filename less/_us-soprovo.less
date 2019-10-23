@@ -1,0 +1,150 @@
+/* === Legal === */
+
+.legal_support__wrapper {
+    display: flex;
+    justify-content: space-between;
+    color: @main-color;
+     
+    .legal_support__first-col {
+        max-width: 670px;
+    }
+    
+    .main__button {
+        width: 530px;
+        height: 49px;
+        line-height: 49px;
+        margin: 55px 0 65px;
+    }
+    
+    .main__caption {
+        margin: 55px 0 35px;
+    }
+}
+
+.legal_support__inform {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 36px;
+    margin: 0;
+     
+    a {
+        color: @link-in-text;
+        font-family: "Gotham Pro Medium", sans-serif;
+        font-weight: 500;
+    }
+}
+
+.legal_support__first-col {
+    h4 {
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 36px;
+    }
+}
+
+.legal_support__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 36px;
+}
+
+.legal_support__item {
+    padding-left: 30px;
+    position: relative;
+    margin-bottom: 10px;
+    text-transform: lowercase;
+    
+    &:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 13px;
+        width: 10px;
+        height: 10px;
+        background-color: @button-bg;
+    }
+}
+
+.legal_support__inform_client {
+    width: 643px;
+    background-color: #f4fcf7;
+    font-size: 16px;
+    line-height: 36px;
+    padding: 30px 40px;
+    margin: 55px 0 0;
+    
+    span {
+        font-weight: 700;
+    }
+}
+
+.legal_support__second-col {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: 65px;
+}
+
+.legal_support__main_img {
+    width: 100%;
+    height: 780px;
+    border-radius: 4px;
+    background-color: #f4fcf7;
+    z-index: 1;
+    
+    img {
+        margin: -80px 0 0 -40px;
+    }
+}
+
+.legal_support__warning_list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    width: 418px;
+    margin-top: -320px;
+    z-index: 2;
+}
+
+.legal_support__warning_item {
+    display: flex;
+    width: 418px;
+    box-shadow: -1px 14px 21px rgba(0, 0, 0, 0.25);
+    background-color: #fff;
+    margin-bottom: 30px;
+    background-image: url(../img/us-soprov/warning.png);
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    background-color: #fff;
+    
+    &:last-child {
+        margin-bottom: 0;
+    }
+    
+    .inform {
+        width: 170px;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 24px;
+        margin: 50px 0 0 20px;
+        
+        padding: 0 0 50px;
+        
+        h4 {
+            margin: 0 0 30px;
+        }
+        
+        p {
+            font-size: 14px;
+            font-weight: 400;
+            margin: 0;
+        }
+    }
+    
+    .legal_img{
+        background-repeat: no-repeat;
+    }
+}

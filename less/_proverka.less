@@ -1,0 +1,203 @@
+/* === Checked block === */
+
+.checked_pass__wrapper {
+    color: @main-color;
+    font-family: "Gotham Pro",sans-serif;
+    display: flex;
+    justify-content: space-between;
+}
+
+.checked_pass__inform {
+    width: 518px;
+    font-weight: 400;
+
+    h2 {
+        font-size: 42px;
+        line-height: 48px;
+    }
+    
+    p {
+        font-size: 14px;
+        line-height: 24px;
+    }
+}
+
+.checked_pass__form_wrapper {
+    width: 730px;
+    height: 466px;
+    background: url(../img/proverka/bg-2.png) repeat;
+    padding: 100px;
+}
+
+.checked_pass__form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 531px;
+    height: 266px;
+    box-shadow: -1px 14px 21px rgba(0, 0, 0, 0.25);
+    border: 10px solid #d8f6e1;
+    background-color: #ffffff;
+    padding: 50px;
+    
+    p {
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 24px;
+        margin: 0;
+    }
+}
+
+.checked_pass__input {
+    width: 430px;
+    height: 60px;
+    border: 2px solid #d8f6e1;
+    margin: 15px 0 25px;
+    color: #81a58c;
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 2.7px;
+    text-align: center;
+    
+    &::placeholder {
+        color: #81a58c;
+        opacity: 0.5;
+    }
+}
+
+.checked_pass__button {
+    width: 306px;
+    height: 50px;
+    line-height: 50px;
+}
+
+/* === /Checked block === */
+
+/* === Notification block === */
+
+.notification {
+    position: relative;
+   
+}
+
+.notification_bg {
+     background: url(../img/proverka/bg.png) repeat;
+     width: 100%;
+     height: 100%;
+     left: 0;
+     top: -100px;
+     position: absolute;
+     z-index: -1;
+}
+
+.notification__wrapper {
+    .main__caption {
+        text-align: center;
+    }
+}
+
+.notification__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.notification__item {
+    display: flex;
+    width: 418px;
+    box-shadow: -1px 14px 21px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    padding: 40px;
+}
+
+.notification__img {
+    width: 80px;
+    height: 80px;
+    background-repeat: no-repeat;
+}
+
+.notification__inform {
+    width: 172px;
+    margin-left: 30px;
+}
+
+.get_notification {
+    font-family: "Gotham Pro", sans-serif;
+    color: @main-color;
+    display: flex;
+    margin-top: 60px;
+    
+    .main__form {
+        width: 642px;
+        margin-top: 0;
+        padding: 50px 40px;
+    }
+    
+    .main__form_caption {
+        font-size: 42px;
+        line-height: 48px;
+        margin: 0 0 5px;
+        font-weight: 400;
+    }
+    
+    .main__form_info {
+        font-size: 14px;
+        margin: 0;
+        line-height: 24px;
+        
+        span {
+            font-weight: 700;
+        }
+    }
+    
+}
+
+.get_notification__img {
+    width: 672px;
+    background-image: url(../img/proverka/photo.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.get_notification__input_wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 25px;
+    
+    .question_error span {
+        right: 15px;
+    }
+    
+    .main__form_input__wrapper {
+        margin-right: 10px;
+        
+        &:nth-child(even){
+            margin-right: 0px;
+        }
+    }
+    
+    .main__form_input {
+        width: 265px;
+        height: 40px;
+    }
+    
+    .main__form_checkbox_wrapper {
+        width: 265px;
+    }
+}
+
+.get_notification__button_wrapper {
+    text-align: center;
+    margin-top: 20px;
+    
+    .main__form_button {
+        line-height: 50px;
+    }
+}
+
+/* === /Notification block === */

@@ -1,0 +1,233 @@
+@main-color: #363636;
+@bg-color-logo: #38bf61;
+@active-link: #38bf61;
+@button-bg: #38bf61;
+@button-bg-hover: #1fd656;
+@link-in-text: #3e65ad;
+@email-color : #3e65ad;
+@breadcrums-color: #81a58c;
+
+
+* {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: top;
+}
+
+.container {
+  max-width: 1330px;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+
+.main__caption {
+    color: @main-color;
+    font-size: 42px;
+    font-weight: 400;
+}
+
+
+
+/* ==== Breadcrums ==== */
+
+.breadcrumbs__wrapper {
+    width: 100%;
+}
+
+.breadcrumbs__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px 0 0;
+    padding: 0;
+    font-family: "Gotham Pro", sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 24px;
+    list-style: none;
+    
+}
+
+.breadcrumbs__item {
+    padding: 0 15px;
+    border-right: 1px solid #d8f6e1;
+    line-height: 12px;
+    margin-bottom: 5px;
+    
+    &:first-child {
+        padding-left: 0;
+    }
+    
+    &:last-child {
+        padding-right: 0;
+        border: none;
+    }
+}
+
+.breadcrumbs__link {
+    color: @breadcrums-color;
+    text-decoration: none;
+    
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+/* ==== /Breadcrums ==== */
+
+/* === Main Form === */
+
+.main__form {
+    width: 418px;
+    box-shadow: -1px 14px 21px rgba(0, 0, 0, 0.25);
+    border: 10px solid #d8f6e1;
+    background-color: #ffffff;
+    padding: 70px 50px 50px;
+    margin-top: -70px;
+}
+
+.main__form_caption {
+    color:@main-color;
+    font-size: 14px;
+    line-height: 30px;
+
+    span {
+        font-size: 42px;
+        font-weight: 400;
+        line-height: 48px;
+    }
+}
+
+.question_error {
+    position: relative;
+    
+    .main__form_input {
+        color: #ff5746;
+        border-color: #ff5746;
+    }
+    
+    span {
+        display: block;
+        width: 6px;
+        height: 17px;
+        background: url(../img/error-input.png) no-repeat;
+        position: absolute;
+        right: 0;
+        top: calc(50% - 15px);
+        
+    }
+    
+}
+
+.main__form_input {
+    width: 315px;
+    border: 2px solid #d8f6e1;
+    color: #81a58c;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    padding: 15px 20px;
+    margin-bottom: 10px;
+}
+
+.main__form_checkbox_wrapper {
+    display: flex;
+    align-items: center;
+    position: relative;
+    
+    p {
+        margin-left: 15px;
+        color: #7f7f7f;
+        font-weight: 400;
+        font-size: 12px;
+        user-select: none;
+        cursor: pointer;
+        width: 80%;
+            
+        a {
+            color: #38bf61;
+            font-weight: 500;
+            line-height: 18px;
+        }
+    }
+    
+    input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0; 
+    }
+}
+
+.custom_checkbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #d8f6e1;
+    background-color: #ffffff;
+    cursor: pointer;
+    
+    span {
+        display: none;
+        width: 10px;
+        height: 10px;
+        box-shadow: 0 4px 4px rgba(255, 87, 70, 0.55);
+        background-color: #ff5746;
+    }
+}
+
+.main__form_checkbox_wrapper {
+    input:checked + .custom_checkbox {
+        span {
+            display: block;
+        }
+    }
+}
+
+.main__form_button {
+    width: 315px;
+    height: 50px;
+    line-height: 50px;
+}
+
+.main__button {
+    font-family: "Gotham Pro", sans-serif;
+    box-shadow: 0 5px 5px rgba(56, 191, 97, 0.55);
+    background-color: @button-bg;
+    border-radius: 4px;
+    text-align: center;
+    border: none;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color .4s;
+    text-align: center;
+    border: none;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 30px;
+    text-transform: uppercase;
+    cursor: pointer;
+    
+    &:hover {
+        background-color: @button-bg-hover;
+    }
+}
+
+/* === /Main Form === */
+
+@media all and (max-width: 768px) {
+    .breadcrumbs__item { 
+        &:last-child {
+            padding-left: 0;
+        }
+    }
+}
