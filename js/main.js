@@ -152,9 +152,10 @@ function changeNav() {
 changeNav();
 
 $(window).on('resize', function(){
-
-     changeNav();
-
+    if($(window).width() > 768) {
+        changeNav();
+    }
+     
     if($(window).width() < 1024) {
         $('.contact_form__wrapper .block_form').append($('.main__form_textarea'));
     }
@@ -210,6 +211,7 @@ if($(window).width() < 1330) {
         $('.main_sub_navigation__wrapper,.all_services').toggleClass('show_sub_menu');
     });
 }
+
 
 if($(window).width() < 768) {
     $('.header_top').append($('.header_top__inforamation'));
