@@ -1011,7 +1011,9 @@ main {
   position: relative;
   display: flex;
   flex-direction: column;
-  margin-left: 15px;
+  /* Хак, чтобы небыло тени видно */
+  width: 98.8%;
+  margin: 0 auto;
 }
 .main_clients_say__wrapper .main_clients_say__slider .show {
   transform: scale(1);
@@ -2065,26 +2067,58 @@ main {
   position: absolute;
   top: 50%;
   left: 50%;
-  margin-left: -150px;
+  transform: translate(-50%, -50%);
   z-index: 3;
   font-family: "Gotham Pro", sans-serif;
   color: #363636;
   font-size: 14px;
 }
-.popup_enter {
-  margin-top: -175px;
-}
-.popup_registration {
-  margin-top: -270px;
-}
-.popup_contact {
-  margin-top: -280px;
-}
+
 .popup .main__form {
   padding: 40px 30px;
   margin: 0;
   width: 300px;
   margin-bottom: 100px;
+}
+
+.popup_full__video {
+  position: fixed;
+  width: 800px;
+  height: 500px;
+  padding: 20px 10px;
+  border: 10px solid #d8f6e1;
+  background: #fff;
+}
+.popup_full__video .popup_close {
+  right: 5px;
+  top: 5px;
+}
+
+.popup_full__video iframe {
+  width: 100%;
+  height: 100%;
+}
+
+.popup_full__letter {
+  position: fixed;
+  max-width: 500px;
+  width: 500px;
+  height: 600px;
+  padding: 20px 10px;
+  border: 10px solid #d8f6e1;
+  background: #fff;
+}
+.popup_full__letter .wrapper {
+  width: 100%;
+  height: 100%;
+}
+.popup_full__letter img {
+  width: 100%;
+  height: 100%;
+}
+.popup_full__letter .popup_close {
+  right: 10px;
+  top: 10px;
 }
 .popup .main__form_input,
 .popup .main__form_button {
@@ -2127,10 +2161,10 @@ main {
 }
 @keyframes show {
   0% {
-    transform: translateY(-1500px);
+    margin-top: -1500px;
   }
   100% {
-    transform: translateY(0px);
+    margin-top: 0px;
   }
 }
 .popup_close {
@@ -2192,12 +2226,13 @@ main {
     transform: rotate(180deg);
   }
 }
-@media all and (max-width: 1620px) {
+
+@media all and (max-width: 1430px) {
   .main_clients_say__slider .slick-prev {
-    left: 10px;
+    left: 0;
   }
   .main_clients_say__slider .slick-next {
-    right: 10px;
+    right: 0;
   }
 }
 
@@ -2283,6 +2318,7 @@ main {
     font-size: 30px;
   }
 }
+
 @media all and (max-width: 1135px) {
   .footer {
     padding-top: 50px;
@@ -2481,6 +2517,10 @@ main {
   }
   .main_clients__filter_list {
     margin-bottom: 40px;
+  }
+
+  .popup_full__video {
+    width: 750px;
   }
   /* === /Clients say === */
   /* === Footer === */
@@ -2971,8 +3011,14 @@ main {
     height: 100%;
     object-fit: cover;
   }
-  .main_clients_say__wrapper .main_clients_say__slider {
-    margin-left: -5px;
+  .popup_full__video {
+    width: 90%;
+    height: 70%;
+  }
+
+  .popup_full__letter {
+    width: 80%;
+    height: 70%;
   }
   .main_clients_say__wrapper .main_clients_say__all_button {
     width: 300px;

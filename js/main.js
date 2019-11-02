@@ -176,6 +176,24 @@ $('.header_top__login_form a,.header_top__callback,.mobile_list li,.registration
 
 });
 
+$('.letter__full_screen').on('click', function(){
+    let prev = $(this).prev();
+    let prevUrl = prev.attr('src');
+    
+    $('.popup_full__letter img').attr('src', prevUrl);
+    $('.popup_full__letter').addClass('active_popup');
+    $('.overlay_popup').addClass('active_popup');
+
+});
+
+$('.main_clients_say__video_button').on('click', function(){
+    let src = $(this).attr('data-src');
+
+    $('.popup_full__video iframe').attr('src', src);
+    $('.popup_full__video').addClass('active_popup');
+    $('.overlay_popup').addClass('active_popup');
+})
+
 $('.overlay_popup,.popup_close').on('click',function(event){
     event.preventDefault();
     $('.popup').removeClass('active_popup');
